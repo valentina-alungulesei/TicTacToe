@@ -1,11 +1,15 @@
 package ticTacToe;
 
+import java.util.Random;
+
 import javax.swing.SwingUtilities;
 
-import ticTacToe.view.WelcomeFrame;
+import ticTacToe.controller.GameController;
 
 // This is the main class
 public class Start {
+	
+	public static Random random = new Random();
 	
 	public static void main (String[] args) {
 		
@@ -13,7 +17,7 @@ public class Start {
 			
 			@Override
 			public void run() {
-				 WelcomeFrame welcomeFrame = new WelcomeFrame();
+				 GameController.getInstance().showGUI();
 			}
 		});
 	}
